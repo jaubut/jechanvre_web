@@ -1,0 +1,309 @@
+<template lang="pug">
+  #grid-shop
+    img.img-top(src="~assets/img/img15.jpg", v-bind:class="{ active: a}")
+    img.img-top(src="~assets/img/img15-2.jpg", v-bind:class="{ active: b}")
+    img.img-top(src="~assets/img/imge4.jpg", v-bind:class="{ active: c}")
+    img.img-top(src="~assets/img/img14.jpg", v-bind:class="{ active: d}")
+    img.img-top(src="~assets/img/img14-2.jpg", v-bind:class="{ active: e}")
+    img.img-top(src="~assets/img/img2.jpg", v-bind:class="{ active: f}")
+    img.img-top(src="~assets/img/img13.jpg", v-bind:class="{ active: g}")
+    img.img-top(src="~assets/img/img13-2.jpg", v-bind:class="{ active: h}")
+    img.img-top(src="~assets/img/img10.jpg", v-bind:class="{ active: i}")
+    img.img-slide.left.un(src="~assets/img/img15.jpg", v-show="blanc", @click="a = true, b = false, c = false")
+    img.img-slide.center.deux(src="~assets/img/img15-2.jpg", v-show="blanc", @click="a = false, b = true, c = false")
+    img.img-slide.right.trois(src="~assets/img/imge4.jpg", v-show="blanc", @click="a = false, b = false, c = true")
+    img.img-slide.left.quattre(src="~assets/img/img14.jpg", v-show="gris", @click="d = true, e = false, f = false")
+    img.img-slide.center.cinq(src="~assets/img/img14-2.jpg", v-show="gris", @click="d = false, e = true, f = false")
+    img.img-slide.right.six(src="~assets/img/img2.jpg", v-show="gris", @click="d = false, e = false, f = true")
+    img.img-slide.left.sept(src="~assets/img/img13.jpg", v-show="bleu", @click="g = true, h = false, i = false")
+    img.img-slide.center.huit(src="~assets/img/img13-2.jpg", v-show="bleu", @click="g = false, h = true, i = false")
+    img.img-slide.right.neuf(src="~assets/img/img10.jpg", v-show="bleu", @click="g = false, h = false, i = true")
+    a(to="#img5")
+      img.img-desk.un(src="~assets/img/img15.jpg", v-show="blanc")
+    a#img5.lightbox(href='#_')
+      img(src='~assets/img/img15.jpg')
+    img.img-desk.deux(src="~assets/img/img15-2.jpg", v-show="blanc")
+    img.img-desk.cinq(src="~assets/img/imge4.jpg", v-show="blanc")
+    img.img-desk.un(src="~assets/img/img14.jpg", v-show="gris")
+    img.img-desk.deux(src="~assets/img/img14-2.jpg", v-show="gris")
+    img.img-desk.cinq(src="~assets/img/img2.jpg", v-show="gris")
+    img.img-desk.un(src="~assets/img/img13.jpg", v-show="bleu")
+    img.img-desk.deux(src="~assets/img/img13-2.jpg", v-show="bleu")
+    img.img-desk.cinq(src="~assets/img/img10.jpg", v-show="bleu")
+    .text-box
+      h2 La casquette
+      p.artist par je chanvre
+      .price 30$
+      p.artist(v-show="blanc") Édition tradition. Le couvre-chef aux inspirations minimalistes.
+      p.artist(v-show="gris") Le « dad’s hat » par excellence : un classique intemporel.
+      p.artist(v-show="bleu") Édition pastel 2017. La bleue « poudre ».
+      p.artist  Unisex.
+    .text-mobile
+      p.artist(v-show="blanc") Édition tradition.
+      p.artist(v-show="gris") Un classique intemporel.
+      p.artist(v-show="bleu") Édition pastel 2017.
+      p Unisex.
+    .btn.blanc(@click="blanc = true, gris = false, bleu = false, d = false, e = false, f = false, g = false, h = false, i = false, a = true")
+    .btn.gris(@click="blanc = false, gris = true, bleu = false, a = false, b = false, c = false, g = false, h = false, i = false, d = true")
+    .btn.bleu(@click="blanc = false, gris = false, bleu = true, d = false, e = false, f = false, a = false, b = false, c = false, i = true")
+    a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.firebaseapp.com/shop', data-item-name='casquette blanche', data-item-price='26.09', data-item-id='20', data-item-description='La casquette chanvre blanche tri-blend', v-show="blanc")
+      p pre-order white <span>30$</span>
+    a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.firebaseapp.com/shop', data-item-name='casquette grise', data-item-price='26.09', data-item-id='21', data-item-description='La casquette chanvre grise tri-blend', v-show="gris")
+      p pre-order grey <span>30$</span>
+    a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.firebaseapp.com/shop', data-item-name='casquette bleu', data-item-price='26.09', data-item-id='22', data-item-description='La casquette chanvre bleue tri-blend', v-show="bleu")
+      p pre-order blue <span>30$</span>
+    .text-produit
+      div(v-show="bleu")
+        h3 Histoire
+        p Édition « lafeuille » | 2017
+        p Un style basic et minimaliste. La fermeture en tissu est idéale pour les plus petites têtes !
+        p Fabriqué en Chine | La Terre du chanvre.  <span><a href="/about">En savoir plus.</a></span>
+      div(v-show="blanc")
+        h3 Histoire
+        p Édition « lafeuille » | Tradition
+        p Elle rend hommage à ses racines avec une broderie « jechanvre », rédigée en chinois traditionnel.  Unisexe, muni d’une ceinture en cuir à l’arrière.
+        p Fabriqué en Chine | La Terre du chanvre.  <span><a href="/about">En savoir plus.</a></span>
+      div(v-show="gris")
+        h3 Histoire
+        p Le tressé gris s’uniformise graduellement pour donner un look jeans, muni d’une ceinture en cuir à l’arrière. C’est un passe-partout, intemporel.
+        p Fabriqué en Chine | La Terre du chanvre.  <span><a href="/about">En savoir plus.</a></span>
+      h3 Matériaux
+      p Matériaux : <strong>30%</strong> Chanvre, <strong>40%</strong> Coton & <strong>30%</strong> Polyester.
+      p On l’avoue, 30%, ce n’est clairement pas assez. Ce produit, c’est la porte d’entré pour le chanvre dans le marché des casquettes.  Ce mélange « tri-blend » unique promet un gage de polyvalence, de confort et de durabilité. C’est la meilleur version qui soit présentement.<span><a href="/about">En savoir plus.</a></span>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      a: true,
+      b: false,
+      c: false,
+      d: true,
+      e: false,
+      f: false,
+      g: true,
+      h: false,
+      i: false,
+      blanc: true,
+      gris: false,
+      bleu: false
+    }
+  }
+}
+</script>
+
+<style lang="stylus" scoped>
+#grid-shop
+  display grid
+  grid-template 1fr 1fr 1fr 1fr / 1fr 1fr 1fr
+  align-items baseline
+.img-top
+  grid-area 1/1/3/4
+  width 100vw
+  height auto
+  opacity 0
+.active
+  opacity 1
+.img-slide
+  width 100%
+  height auto
+  &:active
+    filter grayscale(100%)
+.left
+  grid-area 3/1/4/2
+.center
+  grid-area 3/2/4/3
+.right
+  grid-area 3/3/4/4
+.btn
+  width 50px
+  height 50px
+  border-radius 100%
+  border 1px solid #979797
+  justify-self center
+  align-self flex-start
+  cursor pointer
+  &:hover, &:active
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12);
+.blanc
+  background #F9F9F9
+  grid-area 4/1/5/2
+.gris
+  background #858585
+  grid-area 4/2/5/3
+.bleu
+  background #90E7EE
+  grid-area 4/3/5/4
+.btn-buy
+  width 100vw
+  height 60px
+  background: #FBDA34;
+  border-radius 5px 5px 0 0
+  position sticky
+  bottom 0
+  display flex
+  align-self center
+  justify-content center
+  align-content center
+  grid-area 5/1/6/4
+  p
+    align-self center
+    color black
+  &:hover
+    box-shadow: 0 2px 6px 0 #F8E71C;
+    cursor pointer
+.text-mobile
+  grid-area 4/1/5/4
+  display flex
+  flex-flow row wrap
+  justify-content center
+  align-content center
+  align-self flex-end
+  paddind 50px 25px
+  opacity 1
+.img-desk
+  opacity 0
+  z-index -1
+  position absolute
+  width 0
+  height 0
+  top 1000
+  left 1000
+.text-box
+  opacity 0
+  z-index -1
+  position absolute
+  top 1000
+  left 1000
+.text-produit
+  grid-area 6/1/7/4
+  background #F0F0F0
+  border-radius 5px
+  align-items center
+  text-align justify
+  margin 15px
+  padding 5%
+  h3
+    text-align center
+    margin 25px
+    color #FBDA34
+  p
+    font-family 'Roboto', sans-serif
+  a
+    color darkgrey
+    text-decoration underline
+@media only screen and (min-width: 568px)
+  #grid-shop
+    grid-template repeat(3,20%) / 25% 25% 1fr 1fr 1fr
+    grid-gap 9px
+  .text-mobile
+    opacity 0
+    z-index -1
+    position absolute
+    top 1000
+    left 1000
+  .text-produit
+    margin-top 100px
+    grid-area 2/3/4/6
+  .lightbox
+    display none
+    position fixed
+    z-index 999
+    width 100%
+    height 100%
+    text-align center
+    top 0
+    left 0
+    background rgba(255, 255, 255, 0.95)
+    img
+      max-width 90%
+      max-height 80%
+      margin-top 2%
+    &:target
+      outline none
+      display block
+  .text-box
+    grid-area 1/3/2/6
+    display flex
+    position relative
+    opacity 1
+    flex-flow column wrap
+    justify-content center
+    align-items flex-start
+    padding-left 100px
+    margin-bottom 15px
+    h2, p
+      margin 0
+      padding 0
+    h2
+      font-weight bold
+  .price
+    font-family 'Roboto Slab', serif
+    font-size 24px
+    margin 50px 0
+  .artist
+    font-family 'Roboto', sans-serif
+    color #55504f
+  .btn-buy
+    position relative
+    width 360px
+    grid-area 2/3/3/6
+    align-self flex-start
+    justify-self center
+    margin-top 25px
+    border-radius 5px
+  .img-top
+    z-index -1 !important
+    position absolute
+    width 1px
+    height 1px
+  .active
+    opacity 0
+  .img-slide
+    opacity 0
+    z-index -1
+    position absolute
+    width 1px
+    height 1px
+  .img-desk
+    position relative
+    opacity 1
+    height auto
+    width 100%
+    justify-self center
+    align-self center
+    overflow hidden
+    z-index 999
+    &:hover
+      cursor pointer
+  .un
+    grid-area 1/1/2/2
+  .deux
+    grid-area 1/2/2/3
+  .trois
+    grid-area 2/1/3/2
+  .quattre
+    grid-area 2/2/3/3
+  .cinq
+    grid-area 2/1/4/3
+  .six
+    grid-area 4/1/5/2
+  .sept
+    grid-area 4/2/5/3
+  .huit
+    grid-area 5/1/6/2
+  .neuf
+    grid-area 5/2/6/3
+  .btn
+    align-self flex-end
+  .blanc
+    grid-area 1/3/2/4
+    justify-self right
+  .gris
+    grid-area 1/4/2/5
+    justify-self center
+  .bleu
+    grid-area 1/5/2/6
+    justify-self left
+</style>
