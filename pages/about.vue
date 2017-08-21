@@ -60,10 +60,10 @@ export default {
   line-height 25px
   p
     color darkgrey
-    font-family 'Roboto', sans-serif
+    font-family 'Lato', sans-serif
   h2
     color black
-    font-family 'Roboto', sans-serif
+    font-family 'Lato', sans-serif
   .img-text
     background-size contain
     background-position center center
