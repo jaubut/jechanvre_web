@@ -18,18 +18,42 @@
     img.img-slide.left.sept(src="~assets/img/img13.jpg", v-show="bleu", @click="g = true, h = false, i = false")
     img.img-slide.center.huit(src="~assets/img/img13-2.jpg", v-show="bleu", @click="g = false, h = true, i = false")
     img.img-slide.right.neuf(src="~assets/img/img10.jpg", v-show="bleu", @click="g = false, h = false, i = true")
-    a(to="#img5")
-      img.img-desk.un(src="~assets/img/img15.jpg", v-show="blanc")
+    a.un.img-desk(href="#img5", v-show="blanc")
+      img.img-desk(src="~assets/img/img15.jpg", v-show="blanc")
     a#img5.lightbox(href='#_')
       img(src='~assets/img/img15.jpg')
-    img.img-desk.deux(src="~assets/img/img15-2.jpg", v-show="blanc")
-    img.img-desk.cinq(src="~assets/img/imge4.jpg", v-show="blanc")
-    img.img-desk.un(src="~assets/img/img14.jpg", v-show="gris")
-    img.img-desk.deux(src="~assets/img/img14-2.jpg", v-show="gris")
-    img.img-desk.cinq(src="~assets/img/img2.jpg", v-show="gris")
-    img.img-desk.un(src="~assets/img/img13.jpg", v-show="bleu")
-    img.img-desk.deux(src="~assets/img/img13-2.jpg", v-show="bleu")
-    img.img-desk.cinq(src="~assets/img/img10.jpg", v-show="bleu")
+    a.deux.img-desk(href="#img6", v-show="blanc")
+      img.img-desk(src="~assets/img/img15-2.jpg", v-show="blanc")
+    a#img6.lightbox(href='#_')
+      img(src="~assets/img/img15-2.jpg", v-show="blanc")
+    a.cinq.img-desk(href="#img7", v-show="blanc")
+      img.img-desk(src="~assets/img/imge4.jpg", v-show="blanc")
+    a#img7.lightbox(href='#_')
+      img(src="~assets/img/imge4.jpg", v-show="blanc")
+    a.un.img-desk(href="#img8", v-show="gris")
+      img.img-desk(src="~assets/img/img14.jpg", v-show="gris")
+    a#img8.lightbox(href='#_')
+      img(src="~assets/img/img14.jpg", v-show="gris")
+    a.deux.img-desk(href="#img9", v-show="gris")
+      img.img-desk(src="~assets/img/img14-2.jpg", v-show="gris")
+    a#img9.lightbox(href='#_')
+      img(src="~assets/img/img14-2.jpg", v-show="gris")
+    a.cinq.img-desk(href="#img10", v-show="gris")
+      img.img-desk(src="~assets/img/img2.jpg", v-show="gris")
+    a#img10.lightbox(href='#_')
+      img(src="~assets/img/img2.jpg", v-show="gris")
+    a.un.img-desk(href="#img11", v-show="bleu")
+      img.img-desk(src="~assets/img/img13.jpg", v-show="bleu")
+    a#img11.lightbox(href='#_')
+      img(src="~assets/img/img13.jpg", v-show="bleu")
+    a.deux.img-desk(href="#img12", v-show="bleu")
+      img.img-desk(src="~assets/img/img13-2.jpg", v-show="bleu")
+    a#img12.lightbox(href='#_')
+      img(src="~assets/img/img13-2.jpg", v-show="bleu")
+    a.cinq.img-desk(href="#img13", v-show="bleu")
+      img.img-desk(src="~assets/img/img10.jpg", v-show="bleu")
+    a#img13.lightbox(href='#_')
+      img(src="~assets/img/img10.jpg", v-show="bleu")
     .text-box
       h2 La casquette
       p.artist par je chanvre
@@ -193,6 +217,23 @@ export default {
   a
     color darkgrey
     text-decoration underline
+.lightbox
+  display none
+  position fixed
+  z-index 0
+  width 1px
+  height 1px
+  text-align center
+  top 0
+  left 0
+  background rgba(255, 255, 255, 0.95)
+  img
+    max-width 90%
+    max-height 80%
+    margin-top 2%
+  &:target
+    outline none
+    display none
 @media only screen and (min-width: 568px)
   #grid-shop
     grid-template repeat(3,20%) / 25% 25% 1fr 1fr 1fr
@@ -204,8 +245,7 @@ export default {
     top 1000
     left 1000
   .text-produit
-    margin-top 100px
-    grid-area 2/3/4/6
+    grid-area 3/3/5/6
   .lightbox
     display none
     position fixed
@@ -251,7 +291,7 @@ export default {
     grid-area 2/3/3/6
     align-self flex-start
     justify-self center
-    margin-top 25px
+    margin-top 100px
     border-radius 5px
   .img-top
     z-index -1 !important
@@ -269,12 +309,12 @@ export default {
   .img-desk
     position relative
     opacity 1
-    height auto
+    height 100%
     width 100%
     justify-self center
     align-self center
+    z-index 998
     overflow hidden
-    z-index 999
     &:hover
       cursor pointer
   .un
@@ -295,6 +335,23 @@ export default {
     grid-area 5/1/6/2
   .neuf
     grid-area 5/2/6/3
+  .btn
+    align-self flex-start
+  .blanc
+    grid-area 2/3/3/4
+    justify-self right
+  .gris
+    grid-area 2/4/3/5
+    justify-self center
+  .bleu
+    grid-area 2/5/3/6
+    justify-self left
+@media only screen and (min-width: 1116px)
+  .btn-buy
+    margin-top 25px
+  .text-produit
+    margin-top 100px
+    grid-area 2/3/4/6
   .btn
     align-self flex-end
   .blanc
