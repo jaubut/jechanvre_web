@@ -68,9 +68,9 @@
       p.artist(v-show="bleu") Édition pastel 2017.
       p Unisex.
     .btn.blanc(@click="blanc = true, gris = false, bleu = false, d = false, e = false, f = false, g = false, h = false, i = false, a = true")
-      p.btn-text classic
-    .btn.gris(@click="blanc = false, gris = true, bleu = false, a = false, b = false, c = false, g = false, h = false, i = false, d = true")
       p.btn-text tradition
+    .btn.gris(@click="blanc = false, gris = true, bleu = false, a = false, b = false, c = false, g = false, h = false, i = false, d = true")
+      p.btn-text classique
     .btn.bleu(@click="blanc = false, gris = false, bleu = true, d = false, e = false, f = false, a = false, b = false, c = false, i = true")
       p.btn-text pastel
     a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.io/shop', data-item-name='casquette blanche', data-item-price='26.09', data-item-id='20', data-item-description='La casquette chanvre blanche tri-blend', v-show="blanc")

@@ -1,6 +1,6 @@
 <template lang="pug">
   #grid-alert
-    p.alert Promo de pré-commande: livraison gratuite partout au Canada & Taxes-in ! <span><nuxt-link to="/shop">Voir nos caps</nuxt-link></span>
+    p.alert Promo de pré-commande: Taxes-in & livraison gratuite partout au Canada ! <span><nuxt-link to="/shop">Voir nos caps</nuxt-link></span>
 </template>
 
 <style lang="stylus" scoped>

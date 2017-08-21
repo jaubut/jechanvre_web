@@ -22,11 +22,11 @@ module.exports = {
   },
   manifest: {
     name: 'je chanvre',
-    description: 'je chanvre est un message',
+    description: 'jechanvre. Participes au mouvement. En prévente, livraison mi-septembre. ',
     lang: 'fr',
     theme_color: '#FBDA34',
     ogTitle: 'je chanvre',
-    ogDescription: 'je chanvre est un message'
+    ogDescription: 'jechanvre. Participes au mouvement. En prévente, livraison mi-septembre. '
   },
   /*
   ** Customize the progress-bar color
