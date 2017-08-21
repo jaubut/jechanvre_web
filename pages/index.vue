@@ -3,25 +3,26 @@
     JeHeader
       #grid-header(slot="header-slot")
         img(src="~assets/img/logo-nav.svg")
-        p jechanvre. Participes au mouvement. En prévente, livraison mi-septembre. 
-    .grid-index
-      .item-un
-        JePhoto
-          img.img-full(slot="photoUn", src="~assets/img/imge4.jpg")
-      .item-deux
-        JePhoto
-          img.img-quart.un(slot="photoUn", src="~assets/img/img1.jpg")
-          img.img-quart.deux(slot="photoDeux", src="~assets/img/imge3.jpg")
-          img.img-quart.trois(slot="photoTrois", src="~assets/img/img8.jpg")
-          img.img-quart.quattre(slot="photoQuattre", src="~assets/img/img10.jpg")
-      .item-trois
-        JePhoto
-          img.img-demi(slot="photoUn", src="~assets/img/img16.jpg")
-          img.img-quart.trois(slot="photoDeux", src="~assets/img/img6.jpg")
-          img.img-quart.quattre(slot="photoTrois", src="~assets/img/img17.jpg")
-      .item-quatre
-        JePhoto
-          img.img-demi(slot="photoTrois", src="~assets/img/img12.jpg")
+        p jechanvre. Participes au mouvement. En prévente, livraison mi-septembre.
+    nuxt-link(to="/shop")
+      .grid-index
+        .item-un
+          JePhoto
+            img.img-full(slot="photoUn", src="~assets/img/imge4.jpg")
+        .item-deux
+          JePhoto
+            img.img-quart.un(slot="photoUn", src="~assets/img/img1.jpg")
+            img.img-quart.deux(slot="photoDeux", src="~assets/img/imge3.jpg")
+            img.img-quart.trois(slot="photoTrois", src="~assets/img/img8.jpg")
+            img.img-quart.quattre(slot="photoQuattre", src="~assets/img/img10.jpg")
+        .item-trois
+          JePhoto
+            img.img-demi(slot="photoUn", src="~assets/img/img16.jpg")
+            img.img-quart.trois(slot="photoDeux", src="~assets/img/img6.jpg")
+            img.img-quart.quattre(slot="photoTrois", src="~assets/img/img17.jpg")
+        .item-quatre
+          JePhoto
+            img.img-demi(slot="photoTrois", src="~assets/img/img12.jpg")
 </template>
 
 <script>
