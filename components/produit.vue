@@ -86,7 +86,7 @@
         p Fabriquée en Chine 我大麻. 100% des profits sont réinvestis pour produire une ligne “made in Canada”. <span><a href="/about">En savoir plus.</a></span>
       div(v-show="blanc")
         h3 Histoire
-        p Un hommage aux racines du chanvre avec ’une broderie « jechanvre », rédigée en chinois traditionnel.  Unisexe, dotée d’une ceinture en cuir à l’arrière.
+        p Un hommage aux racines du chanvre avec une broderie « jechanvre », rédigée en chinois traditionnel.  Unisexe, dotée d’une ceinture en cuir à l’arrière.
         p Fabriquée en Chine 我大麻. 100% des profits sont réinvestis pour produire une ligne “made in Canada”. <span><a href="/about">En savoir plus.</a></span>
       div(v-show="gris")
         h3 Histoire

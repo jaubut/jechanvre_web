@@ -22,9 +22,9 @@
       h2 Le projet & le choix des matériaux
       p Pour produire un jour des casquettes en chanvre ecofriendly au Québec, nous devions commencer quelque part. On l’avoue, 30%, ce n’est clairement pas assez. Toutefois, ce mélange « tri-blend » unique (30% chanvre, 40% coton et 30% polyester) est un gage de polyvalence, de confort et de durabilité.  Mieux encore, c’est la porte d’entrée pour le chanvre dans le marché des casquettes.  Nous en sommes donc à un point critique : la première étape d’une grande aventure. <strong>100% des profits de cette collection seront réinvestis pour produire une ligne “made in Canada” dans l’avenir.</strong>
 
-      ol En toute transparence, voici notre plan pour l’aveniri:
+      ol En toute transparence, voici notre plan pour l’avenir:
         li étape: Production d’une ligne de casquettes en chanvre (trois modèles).
-        li étape: Fabriquer des tuques en laines & chanvre, made in Québec.
+        li étape: Fabriquer des tuques en laine & chanvre, made in Québec.
         li étape: Fabriquer des casquettes avec un tissu composé de chanvre & d’autres fibres naturelles, made in Québec.
         li étape: Produire des tuques écologiques 100% au Québec (incluant la fibre)
         li étape: Produire des casquettes écologiques 100% au Quebec (incluant la fibre)
