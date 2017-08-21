@@ -4,7 +4,7 @@
     img.img-top(src="~assets/img/img15-2.jpg", v-bind:class="{ active: b}")
     img.img-top(src="~assets/img/imge4.jpg", v-bind:class="{ active: c}")
     img.img-top(src="~assets/img/img14.jpg", v-bind:class="{ active: d}")
-    img.img-top(src="~assets/img/img14-2.jpg", v-bind:class="{ active: e}")
+    img.img-top(src="~assets/img/img18.jpg", v-bind:class="{ active: e}")
     img.img-top(src="~assets/img/img2.jpg", v-bind:class="{ active: f}")
     img.img-top(src="~assets/img/img13.jpg", v-bind:class="{ active: g}")
     img.img-top(src="~assets/img/img13-2.jpg", v-bind:class="{ active: h}")
@@ -13,7 +13,7 @@
     img.img-slide.center.deux(src="~assets/img/img15-2.jpg", v-show="blanc", @click="a = false, b = true, c = false")
     img.img-slide.right.trois(src="~assets/img/imge4.jpg", v-show="blanc", @click="a = false, b = false, c = true")
     img.img-slide.left.quattre(src="~assets/img/img14.jpg", v-show="gris", @click="d = true, e = false, f = false")
-    img.img-slide.center.cinq(src="~assets/img/img14-2.jpg", v-show="gris", @click="d = false, e = true, f = false")
+    img.img-slide.center.cinq(src="~assets/img/img18.jpg", v-show="gris", @click="d = false, e = true, f = false")
     img.img-slide.right.six(src="~assets/img/img2.jpg", v-show="gris", @click="d = false, e = false, f = true")
     img.img-slide.left.sept(src="~assets/img/img13.jpg", v-show="bleu", @click="g = true, h = false, i = false")
     img.img-slide.center.huit(src="~assets/img/img13-2.jpg", v-show="bleu", @click="g = false, h = true, i = false")
@@ -35,9 +35,9 @@
     a#img8.lightbox(href='#_')
       img(src="~assets/img/img14.jpg", v-show="gris")
     a.deux.img-desk(href="#img9", v-show="gris")
-      img.img-desk(src="~assets/img/img14-2.jpg", v-show="gris")
+      img.img-desk(src="~assets/img/img18.jpg", v-show="gris")
     a#img9.lightbox(href='#_')
-      img(src="~assets/img/img14-2.jpg", v-show="gris")
+      img(src="~assets/img/img18.jpg", v-show="gris")
     a.cinq.img-desk(href="#img10", v-show="gris")
       img.img-desk(src="~assets/img/img2.jpg", v-show="gris")
     a#img10.lightbox(href='#_')
@@ -68,32 +68,35 @@
       p.artist(v-show="bleu") Édition pastel 2017.
       p Unisex.
     .btn.blanc(@click="blanc = true, gris = false, bleu = false, d = false, e = false, f = false, g = false, h = false, i = false, a = true")
+      p.btn-text classic
     .btn.gris(@click="blanc = false, gris = true, bleu = false, a = false, b = false, c = false, g = false, h = false, i = false, d = true")
+      p.btn-text tradition
     .btn.bleu(@click="blanc = false, gris = false, bleu = true, d = false, e = false, f = false, a = false, b = false, c = false, i = true")
-    a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.firebaseapp.com/shop', data-item-name='casquette blanche', data-item-price='26.09', data-item-id='20', data-item-description='La casquette chanvre blanche tri-blend', v-show="blanc")
+      p.btn-text pastel
+    a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.io/shop', data-item-name='casquette blanche', data-item-price='26.09', data-item-id='20', data-item-description='La casquette chanvre blanche tri-blend', v-show="blanc")
       p pre-order white <span>30$</span>
-    a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.firebaseapp.com/shop', data-item-name='casquette grise', data-item-price='26.09', data-item-id='21', data-item-description='La casquette chanvre grise tri-blend', v-show="gris")
+    a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.io/shop', data-item-name='casquette grise', data-item-price='26.09', data-item-id='21', data-item-description='La casquette chanvre grise tri-blend', v-show="gris")
       p pre-order grey <span>30$</span>
-    a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.firebaseapp.com/shop', data-item-name='casquette bleu', data-item-price='26.09', data-item-id='22', data-item-description='La casquette chanvre bleue tri-blend', v-show="bleu")
+    a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.io/shop', data-item-name='casquette bleu', data-item-price='26.09', data-item-id='22', data-item-description='La casquette chanvre bleue tri-blend', v-show="bleu")
       p pre-order blue <span>30$</span>
     .text-produit
       div(v-show="bleu")
         h3 Histoire
-        p Édition « lafeuille » | 2017
-        p Un style basic et minimaliste. La fermeture en tissu est idéale pour les plus petites têtes !
-        p Fabriqué en Chine | La Terre du chanvre.  <span><a href="/about">En savoir plus.</a></span>
+        p Un style basic et minimaliste. La fermeture en tissu est idéale pour les plus petites têtes!
+        p Fabriquée en Chine 我大麻. 100% des profits sont réinvestis pour produire une ligne “made in Canada”. <span><a href="/about">En savoir plus.</a></span>
       div(v-show="blanc")
         h3 Histoire
-        p Édition « lafeuille » | Tradition
-        p Elle rend hommage à ses racines avec une broderie « jechanvre », rédigée en chinois traditionnel.  Unisexe, muni d’une ceinture en cuir à l’arrière.
-        p Fabriqué en Chine | La Terre du chanvre.  <span><a href="/about">En savoir plus.</a></span>
+        p Un hommage aux racines du chanvre avec ’une broderie « jechanvre », rédigée en chinois traditionnel.  Unisexe, dotée d’une ceinture en cuir à l’arrière.
+        p Fabriquée en Chine 我大麻. 100% des profits sont réinvestis pour produire une ligne “made in Canada”. <span><a href="/about">En savoir plus.</a></span>
       div(v-show="gris")
         h3 Histoire
-        p Le tressé gris s’uniformise graduellement pour donner un look jeans, muni d’une ceinture en cuir à l’arrière. C’est un passe-partout, intemporel.
-        p Fabriqué en Chine | La Terre du chanvre.  <span><a href="/about">En savoir plus.</a></span>
+        p Le tressé gris s’uniformise graduellement pour donner un look jeans, muni d’une ceinture en cuir brune à l’arrière.
+        p Fabriquée en Chine 我大麻. 100% des profits sont réinvestis pour produire une ligne “made in Canada”. <span><a href="/about">En savoir plus.</a></span>
       h3 Matériaux
-      p Matériaux : <strong>30%</strong> Chanvre, <strong>40%</strong> Coton & <strong>30%</strong> Polyester.
-      p On l’avoue, 30%, ce n’est clairement pas assez. Ce produit, c’est la porte d’entré pour le chanvre dans le marché des casquettes.  Ce mélange « tri-blend » unique promet un gage de polyvalence, de confort et de durabilité. C’est la meilleur version qui soit présentement.<span><a href="/about">En savoir plus.</a></span>
+      li <strong>30%</strong> Chanvre
+      li <strong>40%</strong> Coton
+      li <strong>30%</strong> Polyester
+      p On l’avoue, 30%, ce n’est clairement pas assez. Ce produit, c’est la porte d’entrée pour le chanvre dans le marché des casquettes. Ce mélange « tri-blend » unique promet un gage de polyvalence, de confort et de durabilité. C’est la meilleure version qui soit présentement. <span><a href="/about">En savoir plus.</a></span>
 </template>
 
 <script>
@@ -141,6 +144,10 @@ export default {
 .right
   grid-area 3/3/4/4
 .btn
+  display flex
+  flex-flow column wrap
+  justify-content center
+  align-content center
   width 50px
   height 50px
   border-radius 100%
@@ -159,6 +166,11 @@ export default {
 .bleu
   background #90E7EE
   grid-area 4/3/5/4
+.btn-text
+  font-size 0.7rem
+  text-align center
+  padding 0
+  margin 0
 .btn-buy
   width 100vw
   height 60px
