@@ -4,7 +4,7 @@
     img.img-top(src="~assets/img/img15-2.jpg", v-bind:class="{ active: b}")
     img.img-top(src="~assets/img/imge4.jpg", v-bind:class="{ active: c}")
     img.img-top(src="~assets/img/img19.jpg", v-bind:class="{ active: d}")
-    img.img-top(src="~assets/img/img18.jpg", v-bind:class="{ active: e}")
+    img.img-top(src="~assets/img/img19-2.jpg", v-bind:class="{ active: e}")
     img.img-top(src="~assets/img/img2.jpg", v-bind:class="{ active: f}")
     img.img-top(src="~assets/img/img13.jpg", v-bind:class="{ active: g}")
     img.img-top(src="~assets/img/img13-2.jpg", v-bind:class="{ active: h}")
@@ -13,7 +13,7 @@
     img.img-slide.center.deux(src="~assets/img/img15-2.jpg", v-show="blanc", @click="a = false, b = true, c = false")
     img.img-slide.right.trois(src="~assets/img/imge4.jpg", v-show="blanc", @click="a = false, b = false, c = true")
     img.img-slide.left.quattre(src="~assets/img/img19.jpg", v-show="gris", @click="d = true, e = false, f = false")
-    img.img-slide.center.cinq(src="~assets/img/img18.jpg", v-show="gris", @click="d = false, e = true, f = false")
+    img.img-slide.center.cinq(src="~assets/img/img19-2.jpg", v-show="gris", @click="d = false, e = true, f = false")
     img.img-slide.right.six(src="~assets/img/img2.jpg", v-show="gris", @click="d = false, e = false, f = true")
     img.img-slide.left.sept(src="~assets/img/img13.jpg", v-show="bleu", @click="g = true, h = false, i = false")
     img.img-slide.center.huit(src="~assets/img/img13-2.jpg", v-show="bleu", @click="g = false, h = true, i = false")
@@ -35,9 +35,9 @@
     a#img8.lightbox(href='#_')
       img(src="~assets/img/img19.jpg", v-show="gris")
     a.deux.img-desk(href="#img9", v-show="gris")
-      img.img-desk(src="~assets/img/img18.jpg", v-show="gris")
+      img.img-desk(src="~assets/img/img19-2.jpg", v-show="gris")
     a#img9.lightbox(href='#_')
-      img(src="~assets/img/img18.jpg", v-show="gris")
+      img(src="~assets/img/img19-2.jpg", v-show="gris")
     a.cinq.img-desk(href="#img10", v-show="gris")
       img.img-desk(src="~assets/img/img2.jpg", v-show="gris")
     a#img10.lightbox(href='#_')
@@ -74,11 +74,11 @@
     .btn.bleu(@click="blanc = false, gris = false, bleu = true, d = false, e = false, f = false, a = false, b = false, c = false, i = true")
       p.btn-text pastel
     a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.io/shop', data-item-name='casquette blanche', data-item-price='26.09', data-item-id='20', data-item-description='La casquette chanvre blanche tri-blend', v-show="blanc")
-      p pre-order white <span>30$</span>
+      p précommande la tradition <span>30$</span>
     a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.io/shop', data-item-name='casquette grise', data-item-price='26.09', data-item-id='21', data-item-description='La casquette chanvre grise tri-blend', v-show="gris")
-      p pre-order grey <span>30$</span>
+      p précommande la classique <span>30$</span>
     a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.io/shop', data-item-name='casquette bleu', data-item-price='26.09', data-item-id='22', data-item-description='La casquette chanvre bleue tri-blend', v-show="bleu")
-      p pre-order blue <span>30$</span>
+      p précommance la pastel <span>30$</span>
     .text-produit
       div(v-show="bleu")
         h3 Histoire
