@@ -31,7 +31,10 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#FBDA34' },
+  loading: {
+    color: '#FBDA34',
+    height: '5px'
+  },
   /*
   ** Build configuration
   */
@@ -73,6 +76,7 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    vendor: []
   }
 }

@@ -3,7 +3,7 @@
     jeHeader
       #grid-header(slot="header-slot")
         img(src="~assets/img/logo-nav.svg")
-        p jechanvre. Participes au mouvement. En prévente, livraison mi-septembre.
+        p jechanvre. Participe au mouvement. En prévente, livraison mi-septembre.
     .about-text
       h2 Le message de « jechanvre » :
 
@@ -43,7 +43,7 @@
         q C’est le moment ou jamais d’appuyer ce projet et de faire de ce rêve une réalité. Chanvrons le monde!
         p.signature - Darko Popovic
       .center
-        img(src="~assets/img/chinahemp.png", width="400px", height="300px", alt="Hemp China", title="Chanvre en Chine")
+        img(src="~assets/img/chinahemp.png", alt="Hemp China", title="Chanvre en Chine")
 </template>
 
 <script>
@@ -94,4 +94,7 @@ blockquote
   text-align right
 .center
   text-align center
+  img
+    max-width 95vw
+    height auto
 </style>

@@ -3,12 +3,12 @@
     JeHeader
       #grid-header(slot="header-slot")
         img(src="~assets/img/logo-nav.svg")
-        p jechanvre. Participes au mouvement. En prévente, livraison mi-septembre.
+        p jechanvre. Participe au mouvement. En prévente, livraison mi-septembre.
     nuxt-link(to="/shop")
       .grid-index
         .item-un
           JePhoto
-            img.img-full(slot="photoUn", src="~assets/img/imge4.jpg")
+            img.img-full(slot="photoUn", src="https://firebasestorage.googleapis.com/v0/b/jechanvre.appspot.com/o/imge4.jpg?alt=media&token=268b261f-4743-411c-bda7-f5e775df4b8a")
         .item-deux
           JePhoto
             img.img-quart.un(slot="photoUn", src="~assets/img/img1.jpg")
