@@ -1,6 +1,7 @@
 <template lang="pug">
   div
-    slot(name="header-slot")
+    #grid-header
+      slot(name="header-slot")
 </template>
 
 <style lang="stylus" scoped>

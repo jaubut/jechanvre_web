@@ -1,0 +1,19 @@
+{
+  "links": {
+    "home": "je chanvre",
+    "about": "À propos",
+    "shop": "Boutique",
+    "english": "en",
+    "french": "fr"
+  },
+  "home": {
+    "title": "jechanvre. Participe au mouvement. En prévente, livraison mi-septembre."
+  },
+  "about": {
+    "title": "jechanvre. Participe au mouvement. En prévente, livraison mi-septembre.",
+    "introduction": "Cette page est faite pour vous donner plus d'informations."
+  },
+  "shop": {
+
+  }
+}

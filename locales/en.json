@@ -1,0 +1,19 @@
+{
+  "links": {
+    "home": "i hemp",
+    "about": "about",
+    "shop": "shop",
+    "english": "en",
+    "french": "fr"
+  },
+  "home": {
+    "title": "ihemp. Take part of the mouvement. Pre-order now, shipping mid-september."
+  },
+  "about": {
+    "title": "ihemp. Take part of the mouvement. Pre-order now, shipping mid-september.",
+    "introduction": "Cette page est faite pour vous donner plus d'informations."
+  },
+  "shop": {
+
+  }
+}

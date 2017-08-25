@@ -38,7 +38,9 @@ module.exports = {
   /*
   ** Build configuration
   */
-  plugins: [],
+  plugins: [
+    { src: '~plugins/i18n.js', injectAs: 'i18n' }
+  ],
   modules: [
     '@nuxtjs/optimize',
     '@nuxtjs/pwa',
@@ -48,7 +50,6 @@ module.exports = {
     '@nuxtjs/workbox',
     '@nuxtjs/font-awesome',
     '@nuxtjs/sitemap',
-    '@nuxtjs/markdownit',
     ['@nuxtjs/google-analytics', { ua: 'UA-82844671-3' }],
     {
       src: '@rafamaciel/firebase',
@@ -62,6 +63,12 @@ module.exports = {
       }
     }
   ],
+  router: {
+    middleware: 'i18n'
+  },
+  generate: {
+    routes: ['/', '/about', '/shop', '/fr', '/fr/about', '/fr/shop']
+  },
   build: {
     /*
     ** Run ESLINT on save
@@ -77,6 +84,6 @@ module.exports = {
         })
       }
     },
-    vendor: []
+    vendor: ['vue-i18n']
   }
 }

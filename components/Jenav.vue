@@ -1,19 +1,21 @@
 <template lang="pug">
   #grid-nav
-    nuxt-link(to="/")
-      h1.title-nav je chanvre
+    nuxt-link(:to="path('/')", exact='')
+      h1.title-nav {{ $t('links.home') }}
+    <nuxt-link v-if="$i18n.locale === 'en'" :to="`/fr` + $route.fullPath" exact>{{ $t('links.french') }}</nuxt-link>
+    <nuxt-link v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')" exact>{{ $t('links.english') }}</nuxt-link>
     .menu-items
-      nuxt-link.link-desk(to="/about") about
-      nuxt-link.link-desk.active(to="/shop") shop
+      nuxt-link.link-desk(:to="path('/about')", exact='') {{ $t('links.about') }}
+      nuxt-link.link-desk.active(:to="path('/shop')", exact='') {{ $t('links.shop') }}
       a.snipcart-checkout.snipcart-summary(href="#")
         p.cart-desk cart(<span class="snipcart-total-items">0</span>)
     a.cart-mobile.snipcart-checkout.snipcart-summary(href="#") cart(<span class="snipcart-total-items">0</span>)
     i.fa.fa-bars(@click="show = !show")
     transition(name="fade")
       .menu-mobile(v-if="show", @click="show = !show")
-        nuxt-link.link-mobile(to="/about") about
-        nuxt-link.link-mobile(to="/shop") shop
-        p je chanvre
+        nuxt-link.link-mobile(:to="path('/about')", exact='') {{ $t('links.about') }}
+        nuxt-link.link-mobile(:to="path('/shop')", exact='') {{ $t('links.shop') }}
+        p {{ $t('links.home') }}
 </template>
 
 <script>
@@ -21,6 +23,11 @@
     data () {
       return {
         show: false
+      }
+    },
+    methods: {
+      path (url) {
+        return (this.$i18n.locale === 'en' ? url : '/' + this.$i18n.locale + url)
       }
     }
   }
