@@ -20,6 +20,9 @@ export default {
   methods: {
     addEmail: function () {
       axios.post(`https://jechanvre.firebaseio.com/emails/.json`, this.$data)
+        .then(this.onSuccess)
+    },
+    onSuccess () {
       this.$success('Yahoo! Tu es ajouté :)')
       this.name = ''
       this.email = ''
