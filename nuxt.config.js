@@ -38,7 +38,7 @@ module.exports = {
   /*
   ** Build configuration
   */
-  plugins: [],
+  plugins: ['~/plugins/vue-notifications', '~/plugins/vee-validate'],
   modules: [
     '@nuxtjs/optimize',
     '@nuxtjs/pwa',
@@ -48,7 +48,7 @@ module.exports = {
     '@nuxtjs/workbox',
     '@nuxtjs/font-awesome',
     '@nuxtjs/sitemap',
-    '@nuxtjs/markdownit',
+    '@nuxtjs/toast',
     ['@nuxtjs/google-analytics', { ua: 'UA-82844671-3' }],
     {
       src: '@rafamaciel/firebase',
@@ -77,6 +77,6 @@ module.exports = {
         })
       }
     },
-    vendor: []
+    vendor: ['axios', 'vue-notifications', 'vee-validate']
   }
 }

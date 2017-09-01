@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     JeHeader
-      #grid-header(slot="header-slot")
+      template(slot="header-slot")
         h2.header-shop La casquette
     Produit
 </template>

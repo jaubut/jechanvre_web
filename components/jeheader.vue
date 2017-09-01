@@ -1,6 +1,7 @@
 <template lang="pug">
   div
-    slot(name="header-slot")
+    #grid-header
+      slot(name="header-slot")
 </template>
 
 <style lang="stylus" scoped>
@@ -9,6 +10,7 @@
   flex-flow column wrap
   justify-content center
   align-content center
+  padding-bottom 25px
   img
     height 125px
     width auto

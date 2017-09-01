@@ -19,6 +19,11 @@ export default {
     JeFooter,
     JeAlert
   },
-  transition: 'page'
+  transition: 'page',
+  methods: {
+    StayOn: function StayOn (event) {
+      this.Jehover = !this.Jehover
+    }
+  }
 }
 </script>

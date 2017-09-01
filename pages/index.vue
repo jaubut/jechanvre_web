@@ -1,14 +1,15 @@
 <template lang="pug">
   div
     JeHeader
-      #grid-header(slot="header-slot")
+      template(slot="header-slot")
         img(src="~assets/img/logo-nav.svg")
         p jechanvre. Participe au mouvement. En prévente, livraison mi-septembre.
+        Jeform
     nuxt-link(to="/shop")
       .grid-index
         .item-un
           JePhoto
-            img.img-full(slot="photoUn", src="https://firebasestorage.googleapis.com/v0/b/jechanvre.appspot.com/o/imge4.jpg?alt=media&token=268b261f-4743-411c-bda7-f5e775df4b8a")
+            img.img-full(slot="photoUn", src="~assets/img/imge4.jpg")
         .item-deux
           JePhoto
             img.img-quart.un(slot="photoUn", src="~assets/img/img1.jpg")
@@ -28,11 +29,13 @@
 <script>
 import JeHeader from '~/components/jeheader.vue'
 import JePhoto from '~/components/jephoto.vue'
+import Jeform from '~/components/jeform.vue'
 
 export default {
   components: {
     JeHeader,
-    JePhoto
+    JePhoto,
+    Jeform
   }
 }
 </script>

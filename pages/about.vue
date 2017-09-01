@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     jeHeader
-      #grid-header(slot="header-slot")
+      template(slot="header-slot")
         img(src="~assets/img/logo-nav.svg")
         p jechanvre. Participe au mouvement. En prévente, livraison mi-septembre.
     .about-text
@@ -38,7 +38,6 @@
       p Dans les faits, le plus vieux morceau de papier connu par l’homme est en réalité un parchemin de chanvre fabriqué par les Chinois, datant de 770 av. J-C.  Alors que nous vivons à l’époque de la renaissance du chanvre, la Chine possède encore un savoir-faire unique au monde, étant le seul pays à complètement transformer la fibre de chanvre en fil.
 
       p Quoi qu’il en soit, notre mission est de profiter de l’expertise chinoise et de populariser les casquettes en chanvre afin d’assumer notre propre production locale dans l’avenir.  À l’extérieur de la Chine, le Canada se démarque déjà comme un leader mondial dans l’industrie du chanvre, notamment en textile.
-
       blockquote
         q C’est le moment ou jamais d’appuyer ce projet et de faire de ce rêve une réalité. Chanvrons le monde!
         p.signature - Darko Popovic
@@ -57,6 +56,17 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.control
+  position relative
+  text-align left
+.input.is-danger, .textarea.is-danger
+  border-color #ff3860
+.help
+	display block
+	font-size 11px
+	margin-top 5px
+.help.is-danger
+	color #ff3860
 .about-text
   display flex
   flex-flow column wrap
