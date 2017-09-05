@@ -1,9 +1,9 @@
 <template lang="pug">
-  form(@submit.prevent="addEmail")
+  form(@submit.prevent="addEmail", name="emailList", netlify)
     .StripeElement
-      input.element(v-validate="'required|email'" :class="{'input': true, 'is-danger': errors.has('email') }" v-model="email" placeholder="email" type="email")
+      input.element(v-validate="'required|email'" :class="{'input': true, 'is-danger': errors.has('email') }" v-model="email" placeholder="email" name="email" type="email")
       span(span v-show="errors.has('email')" class="help is-danger") {{ errors.first('email') }}
-      input.element(required v-model="name" placeholder="nom" type="text")
+      input.element(required v-model="name" placeholder="nom" name="name" type="text")
     button(type="submit") M'alerter
 </template>
 
