@@ -18,7 +18,8 @@ module.exports = {
   },
   css: ['~assets/css/main.styl'],
   sitemap: {
-    generate: true
+    generate: true,
+    hostname: 'https://jechanvre.io',
   },
   manifest: {
     name: 'je chanvre',
