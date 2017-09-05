@@ -1,5 +1,5 @@
 <template lang="pug">
-  form(@submit.prevent="addEmail", name="emailList", netlify)
+  form(action="thank-you", name="emailList", netlify)
     .StripeElement
       input.element(v-validate="'required|email'" :class="{'input': true, 'is-danger': errors.has('email') }" v-model="email" placeholder="email" name="email" type="email")
       span(span v-show="errors.has('email')" class="help is-danger") {{ errors.first('email') }}
@@ -8,27 +8,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-
-export default {
-  data () {
-    return {
-      name: '',
-      email: ''
-    }
-  },
-  methods: {
-    addEmail: function () {
-      axios.post(`https://jechanvre.firebaseio.com/emails/.json`, this.$data)
-        .then(this.onSuccess)
-    },
-    onSuccess () {
-      this.$success('Yahoo! Tu es ajouté :)')
-      this.name = ''
-      this.email = ''
-    }
-  }
-}
 </script>
 
 <style lang="stylus" scoped>
