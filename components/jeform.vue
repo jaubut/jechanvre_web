@@ -1,9 +1,8 @@
 <template lang="pug">
   form(action="thank-you", name="emailList", netlify)
     .StripeElement
-      input.element(v-validate="'required|email'" :class="{'input': true, 'is-danger': errors.has('email') }" v-model="email" placeholder="email" name="email" type="email")
-      span(span v-show="errors.has('email')" class="help is-danger") {{ errors.first('email') }}
-      input.element(required v-model="name" placeholder="nom" name="name" type="text")
+      input.element(placeholder="email" name="email" type="email")
+      input.element(placeholder="nom" name="name" type="text")
     button(type="submit") M'alerter
 </template>
 
