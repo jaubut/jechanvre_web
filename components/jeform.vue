@@ -1,5 +1,5 @@
 <template lang="pug">
-  form(action="thank-you", name="emailList", netlify)
+  form(action="/success", name="emailList", netlify)
     .StripeElement
       input.element(placeholder="email" name="email" type="email")
       input.element(placeholder="nom" name="name" type="text")
