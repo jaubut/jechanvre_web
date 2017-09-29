@@ -1,6 +1,5 @@
 <template>
   <div>
-    <JeAlert></JeAlert>
     <JeNav></JeNav>
     <nuxt/>
     <JeFooter></JeFooter>
@@ -11,13 +10,11 @@
 <script>
 import JeNav from '~/components/Jenav.vue'
 import JeFooter from '~/components/jefooter.vue'
-import JeAlert from '~/components/jealert.vue'
 
 export default {
   components: {
     JeNav,
-    JeFooter,
-    JeAlert
+    JeFooter
   },
   transition: 'page',
   methods: {
