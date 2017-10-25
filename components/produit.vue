@@ -73,12 +73,12 @@
       p.btn-text classique
     .btn.bleu(@click="blanc = false, gris = false, bleu = true, d = false, e = false, f = false, a = false, b = false, c = false, i = true")
       p.btn-text pastel
-    a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.io/shop', data-item-name='casquette blanche', data-item-price='26.09', data-item-id='20', data-item-description='La casquette chanvre blanche tri-blend', v-show="blanc")
-      p commande la tradition <span>30$</span>
-    a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.io/shop', data-item-name='casquette grise', data-item-price='26.09', data-item-id='21', data-item-description='La casquette chanvre grise tri-blend', v-show="gris")
-      p commande la classique <span>30$</span>
-    a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.io/shop', data-item-name='casquette bleu', data-item-price='26.09', data-item-id='22', data-item-description='La casquette chanvre bleue tri-blend', v-show="bleu")
-      p commande la pastel <span>30$</span>
+    a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.io/shop', data-item-name='casquette blanche', data-item-price='29', data-item-id='20', data-item-description='La casquette chanvre blanche tri-blend', v-show="blanc")
+      p commande la tradition <span>29$</span>
+    a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.io/shop', data-item-name='casquette grise', data-item-price='29', data-item-id='21', data-item-description='La casquette chanvre grise tri-blend', v-show="gris")
+      p commande la classique <span>29$</span>
+    a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.io/shop', data-item-name='casquette bleu', data-item-price='29', data-item-id='22', data-item-description='La casquette chanvre bleue tri-blend', v-show="bleu")
+      p commande la pastel <span>29$</span>
     .text-produit
       div(v-show="bleu")
         h3 Histoire
