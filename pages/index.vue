@@ -3,7 +3,7 @@
     JeHeader
       template(slot="header-slot")
         img(src="~assets/img/logo-nav.svg")
-        p jechanvre. Participe au mouvement. En prévente, livraison mi-novembre.
+        p jechanvre. Participe au mouvement. En vente maintenant.
         Jeform
     nuxt-link(to="/shop")
       .grid-index
