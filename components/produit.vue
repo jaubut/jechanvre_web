@@ -57,7 +57,7 @@
     .text-box
       h2 La casquette
       p.artist par je chanvre
-      .price 30$
+      .price 29$
       p.artist(v-show="blanc") Édition tradition. Le couvre-chef aux inspirations minimalistes.
       p.artist(v-show="gris") Le « dad’s hat » par excellence : un classique intemporel.
       p.artist(v-show="bleu") Édition pastel 2017. La bleue « poudre ».
