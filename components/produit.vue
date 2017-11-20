@@ -57,6 +57,7 @@
     .text-box
       h2 La casquette
       p.artist par je chanvre
+      .sold-out(v-show="bleu") Sold-out<br /> précommande-la dès maintenant pour la recevoir début mars.
       .price 29$
       p.artist(v-show="blanc") Édition tradition. Le couvre-chef aux inspirations minimalistes.
       p.artist(v-show="gris") Le « dad’s hat » par excellence : un classique intemporel.
@@ -77,8 +78,8 @@
       p commande la tradition <span>29$</span>
     a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.io/shop', data-item-name='casquette grise', data-item-price='29', data-item-id='21', data-item-description='La casquette chanvre grise tri-blend', v-show="gris")
       p commande la classique <span>29$</span>
-    a.btn-buy.out-stock(href='#', v-show="bleu")
-      p commande la pastel <span>29$</span>
+    a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.io/shop', data-item-name='casquette bleu', data-item-price='29', data-item-id='22', data-item-description='La casquette chanvre bleu tri-blend', v-show="bleu")
+      p pré-commande la pastel <span>29$</span>
     .text-produit
       div(v-show="bleu")
         h3 Histoire
@@ -189,11 +190,10 @@ export default {
   &:hover
     box-shadow: 0 2px 6px 0 #F8E71C
     cursor pointer
-.out-stock
-  background: grey
-  &:hover
-    box-shadow: none
-    cursor: none
+.sold-out
+  color: red
+  font-size: 0.8rem
+  margin 5px 0
 .text-mobile
   grid-area 4/1/5/4
   display flex
