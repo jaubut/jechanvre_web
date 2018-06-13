@@ -78,7 +78,7 @@
     a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.io/shop', data-item-name='casquette grise', data-item-price='30', data-item-id='21', data-item-description='La casquette chanvre grise tri-blend', v-show="gris")
       p commande la classique <span>30$</span>
     a.btn-buy.snipcart-add-item(href='#', data-item-taxable="true" data-item-taxes="TPS|TVQ", data-item-url='https://jechanvre.io/shop', data-item-name='casquette bleu', data-item-price='30', data-item-id='22', data-item-description='La casquette chanvre bleu tri-blend', v-show="bleu")
-      p pré-commande la pastel <span>30$</span>
+      p commande la pastel <span>30$</span>
     .text-produit
       div(v-show="bleu")
         h3 Histoire
