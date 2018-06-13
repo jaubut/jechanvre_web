@@ -7,20 +7,6 @@
         Jeform
     nuxt-link(to="/shop")
       .grid-index
-        .item-un
-          JePhoto
-            img.img-full(slot="photoUn", src="~assets/img/imge4.jpg")
-        .item-deux
-          JePhoto
-            img.img-quart.un(slot="photoUn", src="~assets/img/img1.jpg")
-            img.img-quart.deux(slot="photoDeux", src="~assets/img/imge3.jpg")
-            img.img-quart.trois(slot="photoTrois", src="~assets/img/img8.jpg")
-            img.img-quart.quattre(slot="photoQuattre", src="~assets/img/img10.jpg")
-        .item-trois
-          JePhoto
-            img.img-demi(slot="photoUn", src="~assets/img/img16.jpg")
-            img.img-quart.trois(slot="photoDeux", src="~assets/img/img6.jpg")
-            img.img-quart.quattre(slot="photoTrois", src="~assets/img/img17.jpg")
         .item-quatre
           JePhoto
             img.img-demi(slot="photoTrois", src="~assets/img/img12.jpg")
@@ -63,7 +49,7 @@ export default {
 @media only screen and (min-width: 568px)
   .grid-index
     display grid
-    grid-template 1fr 1fr / 1fr 1fr 1fr
+    grid-template 150px 1fr / 1fr 1fr 1fr
     grid-gap 9px
     align-items: end
     margin-top -100px
