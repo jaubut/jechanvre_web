@@ -4,7 +4,7 @@
       input.element(v-validate="'required|email'" :class="{'input': true, 'is-danger': errors.has('email') }" v-model="email" placeholder="email" type="email")
       span(span v-show="errors.has('email')" class="help is-danger") {{ errors.first('email') }}
       input.element(required v-model="name" placeholder="nom" type="text")
-    button(type="submit") M'alerter
+    button(type="submit") M'abonner
 </template>
 
 <script>
